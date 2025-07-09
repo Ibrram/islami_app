@@ -1,0 +1,34 @@
+name: islami_app_task
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.0
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/splash/
+    - assets/images/bottom_bar_icons/
+  fonts:
+    - family: Janna
+      fonts:
+        - asset: assets/fonts/Janna LT Bold.ttf
+
+    - family: Kamali
+      fonts:
+        - asset: assets/fonts/KamaliRegular-pg81r.ttf
+        - asset: assets/fonts/KamaliRegular-xR725.otf
