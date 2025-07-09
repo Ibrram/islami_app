@@ -23,6 +23,7 @@ flutter:
     - assets/images/
     - assets/images/splash/
     - assets/images/bottom_bar_icons/
+    - assets/suars/
   fonts:
     - family: Janna
       fonts:
