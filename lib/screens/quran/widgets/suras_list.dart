@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_task/models/sura_model.dart';
+import 'package:islami_app_task/screens/quran/view_screen.dart';
 
 class SurasList extends StatelessWidget {
   const SurasList({super.key});
@@ -28,7 +29,14 @@ class SurasList extends StatelessWidget {
             itemBuilder: (context, index) {
               SuraModel current = SuraModel.surasList[index];
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ViewScreen(sura: current),
+                    ),
+                  );
+                },
                 child: Row(
                   children: [
                     Stack(
