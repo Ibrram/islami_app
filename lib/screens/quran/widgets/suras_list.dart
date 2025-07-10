@@ -33,7 +33,10 @@ class SurasList extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ViewScreen(sura: current),
+                      builder: (context) => ViewScreen(
+                        sura: current,
+                        fileId: (index + 1).toString(),
+                      ),
                     ),
                   );
                 },
