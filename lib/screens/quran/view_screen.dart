@@ -72,27 +72,19 @@ class _ViewScreenState extends State<ViewScreen> {
             SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.660,
-              child: ListView.separated(
-                physics: const ClampingScrollPhysics(),
-                itemCount: lines.length,
-                itemBuilder: (context, index) {
-                  return Text(
-                    '[${index + 1}] ${lines[index]}',
-                    style: const TextStyle(
-                      color: Color(0xFFE2BE7F),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Janna',
-                    ),
-                    textDirection: TextDirection.rtl,
-                    textAlign: TextAlign.center,
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 15),
-                  );
-                },
+              child: SingleChildScrollView(
+                child: Text(
+                  finalContent,
+                  style: const TextStyle(
+                    color: Color(0xFFE2BE7F),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'Janna',
+                    height: 3,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
             const Spacer(),
@@ -104,11 +96,17 @@ class _ViewScreenState extends State<ViewScreen> {
   }
 
   List<String> lines = [];
+  String finalContent = "";
   Future<void> readContent() async {
     String fileContent =
         await rootBundle.loadString('assets/suars/${widget.fileId}.txt');
     setState(() {
       lines = fileContent.trim().split('\n');
+      finalContent = lines
+          .asMap()
+          .entries
+          .map((element) => '[${element.key + 1}] ${element.value}')
+          .join('');
     });
   }
 }
