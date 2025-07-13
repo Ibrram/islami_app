@@ -24,6 +24,7 @@ flutter:
     - assets/images/splash/
     - assets/images/bottom_bar_icons/
     - assets/suars/
+    - assets/ahadith/
   fonts:
     - family: Janna
       fonts:
