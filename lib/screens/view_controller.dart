@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:islami_app_task/screens/ahadith/ahadith_screen.dart';
 import 'package:islami_app_task/screens/quran/home_screen.dart';
-import 'package:islami_app_task/screens/splash_screen.dart';
 
 class ViewController extends StatefulWidget {
   const ViewController({super.key});
@@ -14,7 +14,7 @@ class _ViewControllerState extends State<ViewController> {
   int selectedScreenIndex = 0;
   final List<Widget> screens = [
     const HomeScreen(),
-    const SplashScreen(),
+    const AhadithScreen(),
   ];
   @override
   Widget build(BuildContext context) {
