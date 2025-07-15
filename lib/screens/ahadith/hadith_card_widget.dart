@@ -21,17 +21,17 @@ class HadithCardWidget extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: 12,
-            left: 8,
+            top: MediaQuery.of(context).size.height * 0.019,
+            left: MediaQuery.of(context).size.width * 0.020,
             child: Image.asset('assets/images/left_corner.png'),
           ),
           Positioned(
-            top: 12,
-            right: 8,
+            top: MediaQuery.of(context).size.height * 0.019,
+            right: MediaQuery.of(context).size.width * 0.020,
             child: Image.asset('assets/images/right_corner.png'),
           ),
           Positioned(
-            top: 42,
+            top: MediaQuery.of(context).size.height * 0.047,
             left: 0,
             right: 0,
             child: Text(
@@ -58,9 +58,9 @@ class HadithCardWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 80,
-            left: 20,
-            right: 20,
+            top: MediaQuery.of(context).size.height * 0.090,
+            left: MediaQuery.of(context).size.width * 0.050,
+            right: MediaQuery.of(context).size.width * 0.050,
             child: Text(
               hadithContent,
               textAlign: TextAlign.center,
