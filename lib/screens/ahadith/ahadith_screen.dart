@@ -27,10 +27,12 @@ class _AhadithScreenState extends State<AhadithScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/ahadith_background.png'),
             alignment: Alignment.topCenter,
+            fit: BoxFit.fitWidth,
           ),
         ),
         child: Column(
