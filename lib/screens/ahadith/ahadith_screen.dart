@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_app_task/screens/ahadith/view_screen.dart';
 import 'package:islami_app_task/screens/ahadith/widgets/hadith_card_widget.dart';
 
 class AhadithScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _AhadithScreenState extends State<AhadithScreen> {
   // readed date from ahadith files
   var name = '';
   var content = '';
+  var hadithFileId = '1';
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,10 @@ class _AhadithScreenState extends State<AhadithScreen> {
                 height: MediaQuery.of(context).size.height * 0.663,
                 enlargeCenterPage: true,
                 enableInfiniteScroll: true,
-                onPageChanged: (index, reason) => getHadith(fileId: index + 1),
+                onPageChanged: (index, reason) {
+                  getHadith(fileId: index + 1);
+                  hadithFileId = '${index + 1}';
+                },
               ),
               itemCount: 50,
               itemBuilder: (
@@ -53,7 +58,11 @@ class _AhadithScreenState extends State<AhadithScreen> {
                 int itemIndex,
                 int pageViewIndex,
               ) =>
-                  HadithCardWidget(hadithNumber: name, hadithContent: content),
+                  HadithCardWidget(
+                hadithNumber: name,
+                hadithContent: content,
+                callBackFunction: navigateToViewScreenOnClick,
+              ),
             ),
           ],
         ),
@@ -70,5 +79,18 @@ class _AhadithScreenState extends State<AhadithScreen> {
       name = hadithName;
       content = hadithContent;
     });
+  }
+
+  void navigateToViewScreenOnClick() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ViewScreen(
+          name: name,
+          content: content,
+          numberOfFile: hadithFileId,
+        ),
+      ),
+    );
   }
 }
