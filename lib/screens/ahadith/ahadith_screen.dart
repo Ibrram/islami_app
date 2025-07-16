@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_app_task/screens/ahadith/hadith_card_widget.dart';
+import 'package:islami_app_task/screens/ahadith/widgets/hadith_card_widget.dart';
 
 class AhadithScreen extends StatefulWidget {
   const AhadithScreen({super.key});
