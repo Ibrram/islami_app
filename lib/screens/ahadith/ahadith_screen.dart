@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_app_task/helpers/custom_material_navigator.dart';
 import 'package:islami_app_task/screens/ahadith/view_screen.dart';
 import 'package:islami_app_task/screens/ahadith/widgets/hadith_card_widget.dart';
 
@@ -86,7 +87,7 @@ class _AhadithScreenState extends State<AhadithScreen> {
   void navigateToViewScreenOnClick() {
     Navigator.push(
       context,
-      MaterialPageRoute(
+      CustomMaterialNavigator(
         builder: (context) => ViewScreen(
           name: name,
           content: content,

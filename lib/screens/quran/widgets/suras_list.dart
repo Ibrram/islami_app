@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app_task/helpers/custom_material_navigator.dart';
 import 'package:islami_app_task/models/sura_model.dart';
 import 'package:islami_app_task/screens/quran/view_screen.dart';
 
@@ -32,7 +33,7 @@ class SurasList extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
+                    CustomMaterialNavigator(
                       builder: (context) => ViewScreen(
                         sura: current,
                         fileId: (index + 1).toString(),

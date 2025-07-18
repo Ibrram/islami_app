@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:islami_app_task/helpers/custom_material_navigator.dart';
 import 'package:islami_app_task/screens/view_controller.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -67,7 +68,6 @@ class SplashScreen extends StatelessWidget {
           right: 0,
           left: 0,
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
                 'assets/images/route_logo.png',
@@ -93,7 +93,7 @@ class SplashScreen extends StatelessWidget {
       (timer) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(
+          CustomMaterialNavigator(
             builder: (context) => const ViewController(),
           ),
         );
