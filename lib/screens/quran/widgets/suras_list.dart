@@ -29,7 +29,7 @@ class SurasList extends StatelessWidget {
             shrinkWrap: true,
             itemBuilder: (context, index) {
               SuraModel current = SuraModel.surasList[index];
-              return GestureDetector(
+              return InkWell(
                 onTap: () {
                   Navigator.push(
                     context,
@@ -103,11 +103,7 @@ class SurasList extends StatelessWidget {
                   horizontal: MediaQuery.of(context).size.height * 0.068,
                 ),
                 decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: Colors.white,
-                    ),
-                  ),
+                  border: Border(bottom: BorderSide(color: Colors.white)),
                 ),
               );
             },
