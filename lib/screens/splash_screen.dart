@@ -50,9 +50,7 @@ class SplashScreen extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          child: Image.asset(
-            'assets/images/splash/centerd_logo.png',
-          ),
+          child: Image.asset('assets/images/splash/centerd_logo.png'),
         ),
         Positioned(
           right: 0,
@@ -69,9 +67,7 @@ class SplashScreen extends StatelessWidget {
           left: 0,
           child: Column(
             children: [
-              Image.asset(
-                'assets/images/route_logo.png',
-              ),
+              Image.asset('assets/images/route_logo.png'),
               const Text(
                 'Supervised by Mohamed Nabil',
                 style: TextStyle(
@@ -87,17 +83,12 @@ class SplashScreen extends StatelessWidget {
     );
   }
 
-  void timerToNavigator(context) {
-    Timer.periodic(
-      const Duration(seconds: 2),
-      (timer) {
-        Navigator.pushReplacement(
-          context,
-          CustomMaterialNavigator(
-            builder: (context) => const ViewController(),
-          ),
-        );
-      },
-    );
+  void timerToNavigator(BuildContext context) {
+    Timer.periodic(const Duration(seconds: 2), (timer) {
+      Navigator.pushReplacement(
+        context,
+        CustomMaterialNavigator(builder: (context) => const ViewController()),
+      );
+    });
   }
 }
