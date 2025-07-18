@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:islami_app_task/helpers/custom_material_navigator.dart';
-import 'package:islami_app_task/screens/view_controller.dart';
+import 'package:islami_app_task/screens/onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -87,7 +87,7 @@ class SplashScreen extends StatelessWidget {
     Timer.periodic(const Duration(seconds: 2), (timer) {
       Navigator.pushReplacement(
         context,
-        CustomMaterialNavigator(builder: (context) => const ViewController()),
+        CustomMaterialNavigator(builder: (context) => const OnboardingScreen()),
       );
     });
   }

@@ -24,6 +24,7 @@ flutter:
     - assets/images/
     - assets/images/splash/
     - assets/images/bottom_bar_icons/
+    - assets/images/onboarding/
     - assets/suars/
     - assets/ahadith/
   fonts:
