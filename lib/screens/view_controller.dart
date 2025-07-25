@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:islami_app_task/screens/ahadith/ahadith_screen.dart';
 import 'package:islami_app_task/screens/quran/home_screen.dart';
+import 'package:islami_app_task/screens/radio/radio_screen.dart';
 import 'package:islami_app_task/screens/seb7a/seb7a_screen.dart';
 
 class ViewController extends StatefulWidget {
@@ -17,6 +18,8 @@ class _ViewControllerState extends State<ViewController> {
     const HomeScreen(),
     const AhadithScreen(),
     const Seb7aScreen(),
+    const RadioScreen(),
+    const Placeholder(),
   ];
   @override
   Widget build(BuildContext context) {
