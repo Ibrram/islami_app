@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:islami_app_task/screens/ahadith/ahadith_screen.dart';
 import 'package:islami_app_task/screens/quran/home_screen.dart';
+import 'package:islami_app_task/screens/seb7a/seb7a_screen.dart';
 
 class ViewController extends StatefulWidget {
   const ViewController({super.key});
@@ -15,6 +16,7 @@ class _ViewControllerState extends State<ViewController> {
   final List<Widget> screens = [
     const HomeScreen(),
     const AhadithScreen(),
+    const Seb7aScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -40,15 +42,19 @@ class _ViewControllerState extends State<ViewController> {
               ),
               child: SvgPicture.asset(
                 'assets/images/bottom_bar_icons/quran.svg',
-                colorFilter:
-                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
                 width: 19,
               ),
             ),
             icon: SvgPicture.asset(
               'assets/images/bottom_bar_icons/quran.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ),
               width: 19,
             ),
             label: 'Quran',
@@ -62,15 +68,19 @@ class _ViewControllerState extends State<ViewController> {
               ),
               child: SvgPicture.asset(
                 'assets/images/bottom_bar_icons/hadith.svg',
-                colorFilter:
-                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
                 width: 19,
               ),
             ),
             icon: SvgPicture.asset(
               'assets/images/bottom_bar_icons/hadith.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ),
               width: 19,
             ),
             label: 'Hadith',
@@ -84,15 +94,19 @@ class _ViewControllerState extends State<ViewController> {
               ),
               child: SvgPicture.asset(
                 'assets/images/bottom_bar_icons/necklace.svg',
-                colorFilter:
-                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
                 width: 19,
               ),
             ),
             icon: SvgPicture.asset(
               'assets/images/bottom_bar_icons/necklace.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ),
               width: 19,
             ),
             label: 'Seb7a',
@@ -106,15 +120,19 @@ class _ViewControllerState extends State<ViewController> {
               ),
               child: SvgPicture.asset(
                 'assets/images/bottom_bar_icons/radio.svg',
-                colorFilter:
-                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
                 width: 19,
               ),
             ),
             icon: SvgPicture.asset(
               'assets/images/bottom_bar_icons/radio.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ),
               width: 19,
             ),
             label: 'Radio',
@@ -128,15 +146,19 @@ class _ViewControllerState extends State<ViewController> {
               ),
               child: SvgPicture.asset(
                 'assets/images/bottom_bar_icons/time.svg',
-                colorFilter:
-                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(
+                  Colors.white,
+                  BlendMode.srcIn,
+                ),
                 width: 19,
               ),
             ),
             icon: SvgPicture.asset(
               'assets/images/bottom_bar_icons/time.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(
+                Colors.black,
+                BlendMode.srcIn,
+              ),
               width: 19,
             ),
             label: 'Time',
