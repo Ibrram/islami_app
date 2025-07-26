@@ -6,11 +6,7 @@ class ViewScreen extends StatefulWidget {
   final SuraModel sura;
   final String fileId;
 
-  const ViewScreen({
-    super.key,
-    required this.sura,
-    required this.fileId,
-  });
+  const ViewScreen({super.key, required this.sura, required this.fileId});
 
   @override
   State<ViewScreen> createState() => _ViewScreenState();
@@ -98,8 +94,9 @@ class _ViewScreenState extends State<ViewScreen> {
   List<String> lines = [];
   String finalContent = "";
   Future<void> readContent() async {
-    String fileContent =
-        await rootBundle.loadString('assets/suars/${widget.fileId}.txt');
+    String fileContent = await rootBundle.loadString(
+      'assets/suars/${widget.fileId}.txt',
+    );
     setState(() {
       lines = fileContent.trim().split('\n');
       finalContent = lines

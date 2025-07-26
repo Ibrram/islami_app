@@ -4,6 +4,7 @@ import 'package:islami_app_task/screens/ahadith/ahadith_screen.dart';
 import 'package:islami_app_task/screens/quran/home_screen.dart';
 import 'package:islami_app_task/screens/radio/radio_screen.dart';
 import 'package:islami_app_task/screens/seb7a/seb7a_screen.dart';
+import 'package:islami_app_task/screens/time/time_screen.dart';
 
 class ViewController extends StatefulWidget {
   const ViewController({super.key});
@@ -19,7 +20,7 @@ class _ViewControllerState extends State<ViewController> {
     const AhadithScreen(),
     const Seb7aScreen(),
     const RadioScreen(),
-    const Placeholder(),
+    const TimeScreen(),
   ];
   @override
   Widget build(BuildContext context) {
