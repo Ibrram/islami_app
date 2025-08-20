@@ -17,7 +17,7 @@ class CustomPostion extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Positioned(
-      top: isTop ? screenSize.height * 0.015 : null,
+      top: isTop ? screenSize.height * 0.020 : null,
       left: isLeft ? screenSize.width * 0.060 : null,
       right: isRight ? screenSize.width * 0.060 : null,
 

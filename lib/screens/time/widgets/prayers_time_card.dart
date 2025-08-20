@@ -33,7 +33,7 @@ class PrayersTimeCard extends StatelessWidget {
           CustomPostion(
             isTop: true,
             child: Column(
-              spacing: screenSize.height * 0.009,
+              spacing: screenSize.height * 0.005,
               children: const [
                 Text(
                   'Pray Time',
